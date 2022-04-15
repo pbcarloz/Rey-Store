@@ -1,9 +1,16 @@
-import './components/categories/categories-menu.jsx'
-import CategoriesMenu from './components/categories/categories-menu.jsx';
+import {Routes, Route } from 'react-router-dom'
+import Home from "./routes/home/home.component";
+import Navigation from './routes/navigation/navigation.component';
+
 
 const App = () => {
   return (
-  <CategoriesMenu />
+    <Routes>
+      <Route path='/' element={<Navigation />}>
+        <Route index element={ <Home /> }/>
+        <Route path='shop' element={<h1>I Am the Shop</h1>}/>
+      </Route>
+    </Routes>
   );
 }
 
