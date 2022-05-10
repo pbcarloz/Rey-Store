@@ -3,6 +3,8 @@ import { Outlet, Link } from "react-router-dom"
 import { ReactComponent as ReyLogo } from '../../assets/crown.svg';
 import { UserContext } from "../../context/user.context";
 import { signOutUser } from '../../utils/firebase/firebase.utils.js';
+import CartIcon from "../../components/cart-icon/cart-icon.component";
+import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 
 import './navigation.styles.scss'
 
@@ -33,8 +35,10 @@ const Navigation = () => {
                             </Link>
                         )
                 }
+                <CartIcon />
                 
             </div>
+                <CartDropdown />
         </div>
           <Outlet />
       </Fragment>
