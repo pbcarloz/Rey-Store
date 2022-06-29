@@ -37,6 +37,6 @@ const Checkout = () => {
                 <span className='total'>Total: ${cartTotal}</span>
         </div>
     )
-}
+};
 
 export default Checkout;
